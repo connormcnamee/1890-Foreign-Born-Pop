@@ -4,7 +4,6 @@ library(ggthemes)
 library(gtable)
 library(showtext)
 # read in the dataset
-State_Immigrant_Pop <- read_csv("State_Immigrant_Pop.csv")
 States <- c("New York", "Pennsylvania", "Illinois", "Massachusetts",
             "Michigan", "Wisconsin", "Minnesota", "Ohio", "California",
             "New Jersey", "Iowa", "Missouri", "Nebraska", "Connecticut",
@@ -38,7 +37,7 @@ ggplot(Foreign_Born_Pop) +
   # change x-axis labels to every 100, and move the labels to the top
   scale_x_continuous(breaks = seq(100,1500,100), position = "top") +
   #change size, position, and fonts of the text in the chart
-  theme(axis.title.x = element_text(size = 6, family = "serif", margin = margin(t = 50, b = -400)),
+  theme(axis.title.x.top = element_text(size = 6, family = "serif", vjust = -11),
         axis.title.y = element_text(size = 6, hjust = 0, vjust = .5, family = "serif"),
         plot.title = element_text(size = 8, hjust = .5, vjust = -15, family = "Puritan"),
         plot.subtitle = element_text(size = 6, hjust = .05, vjust = -29, family = "serif"),
@@ -53,5 +52,4 @@ ggplot(Foreign_Born_Pop) +
         panel.grid.major.y = element_blank(),
         panel.grid.major.x = element_blank(),
         plot.margin = unit(c(0,-10,.6,-10), "cm"))
-
   
