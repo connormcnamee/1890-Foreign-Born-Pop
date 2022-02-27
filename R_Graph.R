@@ -15,8 +15,8 @@ States <- c("New York", "Pennsylvania", "Illinois", "Massachusetts",
             "Arkansas", "Alabama", "Delaware", "New Mexico", "Georgia",
             "Mississippi", "South Carolina", "North Carolina", "Oklahoma")
 
-Pop <- c(1567,848,840,645,540,530,470,470,385,346,342,234,200,190,153,148,146,110,
-         100,94,90,84,87,84,81,75,70,65,60,56,44,23,21,20,20,18,15,14,12,10,10,10,9,8,8,7,6,5,4)
+Pop <- c(1570,854,850,653,543,533,469,463,379,348,343,242,206,189,160,154,154,115,
+         104,96,94,90,89,85,82,66,61,57,52,49.87,44.32,30.47,26.32,25,25,23.5,23.4,23.3,23,20,16.43,16.2,15.5,14.6,14.5,12.3,12,10,8.5)
 
 Foreign_Born_Pop <- tibble::tibble(States,Pop)
 
@@ -41,14 +41,14 @@ ggplot(Foreign_Born_Pop) +
   #change size, position, and fonts of the text in the chart
   theme(axis.title.x.top = element_text(size = 14, family = "serif", vjust = 0),
         axis.title.y = element_text(size = 14, hjust = 0, vjust = .5, family = "serif"),
-        plot.title = element_text(size = 18, hjust = .5, vjust = -3, family = "Puritan"),
+        plot.title = element_text(size = 25, hjust = .5, vjust = -3, family = "Puritan"),
         plot.subtitle = element_text(size = 14, hjust = .03, vjust = -15, family = "serif"),
         axis.text.x = element_text(vjust = 5, family = "serif", size = 14),
         axis.text.x.top = element_text(margin = margin(t = 20, b = -28)),
         axis.text.y = element_text(hjust = 0, size = 14, vjust = .45, margin = margin(l = 30, r = -130.5)),
         axis.text = element_text(family = "serif"),
         axis.ticks = element_blank(),
-        panel.border = element_rect(fill = NA, color = "black"),
+        panel.border = element_rect(fill = NA, color = "black", size = 1.5),
         aspect.ratio = 1.2,
         panel.grid.minor.x = element_blank(),
         panel.grid.major.y = element_blank(),
